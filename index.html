@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video Mood & Stress Detector</title>
+  <style>
+    body { font-family: sans-serif; display:flex; gap:16px; padding:12px; }
+    #video { border:1px solid #222; width:640px; height:480px; }
+    #overlay { position:absolute; left:0; top:0; pointer-events:none; }
+    #controls { display:flex; flex-direction:column; gap:8px; width:320px; }
+    .score { font-size:20px; font-weight:600; }
+    button{padding:8px}
+  </style>
+</head>
+<body>
+  <div style="position:relative">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="overlay" width="640" height="480"></canvas>
+  </div>
+  <div id="controls">
+    <div>
+      <button id="collect-happy">Collect: Happy</button>
+      <button id="collect-sad">Collect: Sad</button>
+      <button id="collect-stressed">Collect: Stressed</button>
+    </div>
+    <div>
+      <button id="train">Train Model (in-browser)</button>
+      <button id="save">Download Model</button>
+    </div>
+    <div class="score" id="mood">Mood: —</div>
+    <div class="score" id="stress">Stress: —</div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
