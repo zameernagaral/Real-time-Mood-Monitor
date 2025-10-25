@@ -2,38 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Real Time Mood Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Emotion Recognition</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="shortcut icon" href="/icons8-mood-32.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
 </head>
 <body>
   <div class="container">
-    <h1>Real Time Mood Detector</h1>
-     <div class="theme-toggle">
-      <button id="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
-    </div>
+    <h1>Live Emotion Recognition</h1>
+
+   
     
     <div class="info-section fade-in">
-      <p>-> This website uses your webcam to analyze your facial expressions in real-time and detect your mood using a machine learning model.</p>
-      <p>-> Please allow access to your webcam when prompted.</p>
-      <p>-> This is a proof of concept and not intended for medical use.</p>
+      <p>→ This demo uses your camera to observe facial patterns and estimate your current emotion through an "AI model" running locally in your browser.</p>
+      <p>→ Kindly grant "camera" access when requested.</p>
+      <p>→ The application is designed for "hackathon" only, not for professional or medical interpretation.</p>
     </div>
 
     <div class="video-container fade-in">
@@ -41,12 +25,12 @@
       <canvas id="overlay"></canvas>
       <div class="loading-overlay">
         <div class="loading-spinner"></div>
-        <p class="loading-text">Loading model...</p>
+        <p class="loading-text">Preparing the emotion model...</p>
       </div>
     </div>
 
     <div id="controls" class="fade-in">
-      <div class="score" id="mood">Initializing...</div>
+      <div class="score" id="mood">Starting system...</div>
     </div>
   </div>
 
